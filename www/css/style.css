@@ -1,0 +1,8 @@
+.bump {}
+.bump.ng-enter {
+  transform: scale(2) rotate(180deg);
+  transition: 0.8s ease;
+}
+.bump.ng-enter-active {
+  transform: scale(1) rotate(0deg);
+}

@@ -1,0 +1,41 @@
+<ion-view view-title="Rechnen">
+  <ion-content class="padding">
+    <button class="button button-block button-large button-positive" on-tap="start()" ng-hide="started">
+      Los!
+    </button>
+    <div ng-show="started">
+      <div class="card">
+        <div class="item item-text-wrap">
+          <i class="icon ion-clock" ng-repeat="c in counter"></i>
+        </div>
+      </div>
+      <div class="card" style="width: 500px; margin: 30px auto;">
+        <div class="item item-positive item-text-wrap item-icon-right" style="text-align: center; font-size: 350%; padding: 50px">
+          {{aufgabe}}
+          <i class="icon ion-checkmark bump" ng-if="richtig"></i>
+          <i class="icon ion-close bump" ng-if="falsch"></i>
+        </div>
+      </div>
+      <span class="padding" ng-repeat="group in buttons">
+        <button class="button button-large button-stable" ng-repeat="button in group" on-tap="check(button)" style="margin-left: 1ex">
+          <strong>
+            {{button}}
+          </strong>
+        </button>
+      </span>
+    </div>
+    <div ng-show="anzahlRichtig + anzahlFalsch > 0 &amp;&amp; !started">
+      <div class="card">
+        <div class="item item-icon-left item-balanced">
+          {{anzahlRichtig}}
+          <i class="icon ion-checkmark"></i>
+        </div>
+      </div>
+      <div class="card">
+        <div class="item item-icon-left item-assertive">
+          {{anzahlFalsch}}
+          <i class="icon ion-close"></i>
+        </div>
+      </div>
+  </ion-content>
+</ion-view>

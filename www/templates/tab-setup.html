@@ -1,0 +1,39 @@
+<ion-view view-title="Setup">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-input item-select">
+        <div class="input-label">
+          Anzahl der Aufgaben
+        </div>
+        <select ng-model="Settings.AnzahlAufgaben">
+          <option>5</option>
+          <option>10</option>
+          <option>20</option>
+        </select>
+      </ion-item>
+      <ion-item class="item-input item-select">
+        <div class="input-label">
+          Zeit pro Aufgabe
+        </div>
+        <select ng-model="Settings.ZeitProAufgabe">
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>10</option>
+        </select>
+      </ion-item>
+      <ion-item class="item-input item-select">
+        <div class="input-label">
+          Zahlenraum
+        </div>
+        <select ng-model="Settings.Zahlenraum">
+          <option>6</option>
+          <option>8</option>
+          <option>10</option>
+          <option>12</option>
+          <option>20</option>
+        </select>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
